@@ -6,7 +6,7 @@
     <title>Title</title>
 </head>
 <body>
-Hi, please enter a GitHub user name.
+<p>Hi, please enter a GitHub user name.</p>
 
 <form action="details" method="GET">
 

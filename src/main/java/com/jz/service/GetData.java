@@ -24,7 +24,7 @@ public class GetData {
 
     public static List<RepoDTO> getUsersRepos(String username) {
 
-        return getListByUrl("https://api.github.com/users/" + username + "/repos");
+        return getListByUrl("https://api.github.com/users/" + username + "/repos?per_page=100");
 
     }
 
