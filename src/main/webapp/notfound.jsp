@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>No one there</title>
     <style>
         body {
             font-family: sans-serif;
@@ -11,13 +11,8 @@
     </style>
 </head>
 <body>
-<p>Hi, please enter a GitHub user name.</p>
-
-<form action="details" method="GET">
-
-    <input type="text" required="required" name="username"/>
-    <input type="submit" value="Submit">
-
-</form>
+<h3> No such user! </h3>
+<br>
+<a href="\">Go back</a>
 </body>
 </html>

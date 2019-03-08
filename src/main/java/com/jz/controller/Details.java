@@ -22,8 +22,14 @@ public class Details extends HttpServlet {
 
         String username = req.getParameter("username");
 
-        List<RepoDTO> list = GetData.getUsersRepos(username);
         OwnerDTO owner = GetData.getOwnerByUsername(username);
+
+        if (owner.getName() == null) {
+            req.getRequestDispatcher("/notfound.jsp").forward(req, resp);
+        }
+
+        List<RepoDTO> list = GetData.getUsersRepos(username);
+
         Map<String, Integer> stats = Languages.getStats(list);
 
         req.setAttribute("list", list);
