@@ -17,7 +17,14 @@ email: ${owner.email}<br>
             ${repo.description}
         </li>
     </c:forEach>
-
+</ul>
+<ul>
+<h4>Language stats:</h4>
+<c:forEach var="entry" items="${stats}">
+    <li>
+    Language: <b><c:out value="${entry.key}"/></b>, Usage: <c:out value="${entry.value}"/>
+    </li>
+</c:forEach>
 </ul>
 </body>
 </html>
