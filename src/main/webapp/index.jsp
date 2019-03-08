@@ -8,7 +8,7 @@
 <body>
 Hi, please enter a GitHub user name.
 
-<form action="details" method="POST">
+<form action="details" method="GET">
 
     <input type="text" required="required" name="username"/>
     <input type="submit" value="Submit">

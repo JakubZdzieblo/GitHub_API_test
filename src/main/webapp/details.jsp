@@ -6,6 +6,18 @@
     <title>Details</title>
 </head>
 <body>
+<h3>${owner.name}'s details:</h3>
+user name: ${owner.login}<br>
+email: ${owner.email}<br>
+<ul>
+    <h4>Repositories list:</h4>
+    <c:forEach items="${list}" var="repo">
+        <li>
+            <b>${repo.name}</b>, in ${repo.language}.<BR>
+            ${repo.description}
+        </li>
+    </c:forEach>
 
+</ul>
 </body>
 </html>

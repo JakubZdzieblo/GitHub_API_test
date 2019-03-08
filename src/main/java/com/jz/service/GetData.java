@@ -9,12 +9,14 @@ import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.params.HttpMethodParams;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class GetData {
 
-    private static String token = "f3bf8b39a7168bf03afddc70902c056e0a9b2073";
+
 
     public static List<RepoDTO> getUsersRepos(String username) {
 
@@ -23,6 +25,14 @@ public class GetData {
     }
 
     public static OwnerDTO getOwnerByUsername(String username) {
+
+        String token = "";
+
+        try {
+            token = new String(Files.readAllBytes(Paths.get("token.txt")), "UTF-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return getOwnerByUrl("https://api.github.com/users/" + username + "?access_token="+token);
 
