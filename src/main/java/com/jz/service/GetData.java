@@ -8,7 +8,11 @@ import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.params.HttpMethodParams;
 
+
+import java.io.File;
+
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -26,13 +30,7 @@ public class GetData {
 
     public static OwnerDTO getOwnerByUsername(String username) {
 
-        String token = "";
-
-        try {
-            token = new String(Files.readAllBytes(Paths.get("token.txt")), "UTF-8");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        String token = Token.token;
 
         return getOwnerByUrl("https://api.github.com/users/" + username + "?access_token="+token);
 
