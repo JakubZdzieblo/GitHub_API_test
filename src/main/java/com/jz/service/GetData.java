@@ -14,7 +14,7 @@ import java.util.List;
 
 public class GetData {
 
-    private static String token = "572347c3226b1f2279d5bb4c46993ca3e919e98f";
+    private static String token = "f3bf8b39a7168bf03afddc70902c056e0a9b2073";
 
     public static List<RepoDTO> getUsersRepos(String username) {
 

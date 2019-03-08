@@ -6,6 +6,13 @@
     <title>Title</title>
 </head>
 <body>
-Hi
+Hi, please enter a GitHub user name.
+
+<form action="details" method="POST">
+
+    <input type="text" required="required" name="username"/>
+    <input type="submit" value="Submit">
+
+</form>
 </body>
 </html>
